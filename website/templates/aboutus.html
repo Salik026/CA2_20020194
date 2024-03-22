@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+{% block title %} About Us {% endblock%}
+{% block content %}
+ {% block style %}
+    <style>
+        body {
+            background-color: Pink; /* Light red background color */
+        }
+
+    </style>
+
+
+    {% endblock%}
+<main>
+
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class="active" aria-current="true"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active carousel-item-start">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+  
+          <div class="container">
+            <div class="carousel-caption ">
+              
+              <h1>World's Leading solution Company</h1>
+              
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item carousel-item-next carousel-item-start">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+  
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Your data is in safe hands</h1>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+  
+          <div class="container">
+            <div class="carousel-caption ">
+             
+              <h1> Easy Registration and Access</h1>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  
+  
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+  
+    <div class="container marketing">
+      <!-- START THE FEATURETTES -->
+  
+      <hr class="featurette-divider">
+  
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">We expertise in.. <span class="text-muted">It’ll blow your mind.</span></h2>
+          <br>
+          <p class="lead">Interactive and Simplified user interface</p>
+          <br>
+          <p class="lead">No complicated steps</p>
+        </div>
+        <div class="col-md-5">
+          <img src="/static/images/lms1.jpg" alt="one" width="500" height="500">
+  
+        </div>
+      </div>
+  
+      <hr class="featurette-divider">
+  
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
+          <p class="lead">Faster application and no waiting time for updating the status </p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img src="/static/images/lms2.jpg" alt="two" width="500" height="500">
+  
+        </div>
+      </div>
+  
+    </div><!-- /.container -->
+  
+  </main>
+
+{% endblock %}

@@ -1,0 +1,79 @@
+    {% extends "base.html" %}
+    {% block title %} Home {% endblock%}
+    {% block content %}
+     {% block style %}
+    <style>
+        body {
+            background-color: blue; /* Light red background color */
+        }
+
+    </style>
+
+
+    {% endblock%}
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-8" >
+                <div class="p-5 mb-4 bg-light rounded-3">
+                    <div class="container-fluid py-5">
+                      <h1 class="display-5 fw-bold">Your Leaves</h1>
+                      <div class="col-md-8 form-group" id="leaves">
+                        
+                        {% for leave in leaves %}
+                        <div class="card  center border-dark">
+                            <div class="card-body">
+                                <div class="card-text"> 
+            
+                                    Leave Start Date : {{leave.startdate}} <br>
+                                    Leave End Date : {{leave.enddate}}<br>
+                                    Comments : {{leave.comment}}<br>
+                                    {% if leave.status==1 %}
+                                        Status : Approved 
+                                    {% endif %}
+                                    {% if leave.status==2 %}
+                                        Status : Rejected 
+                                    {% endif %}
+                                    {% if leave.status==3 %}
+                                        Status : Pending 
+                                    {% endif %}
+                                </div>
+                                <div class="card-footer text-muted">
+                                    Leave applied on {{leave.leavedate_created}}
+                                </div>
+                            </div>
+                            <hr class="featurette-divider">
+                        </div>
+                        {% endfor %}
+                    </div>
+                    </div>
+                </div>
+            </div>
+        
+        
+
+        <div class="col-md-4" >
+        <div class="p-5 mb-4 bg-light rounded-3">
+            <div class="container-fluid py-5">
+              <h1 class="display-5 fw-bold">As you know..</h1>
+              <p class="col-md-8 fs-4">
+
+                <ol>
+                    <li>
+                        View all the history of created leave applications
+                    </li>
+                    <li>
+                        If status is Approved, you can take the time off 
+                    </li>
+                    <li>
+                        If status is Rejected, your application is rejected. Please check with your manager for more Information 
+                    </li>
+
+                </ol>
+              </p>
+            </div>
+        </div>
+        </div>
+        </div>
+    </div>
+    {% endblock %}
