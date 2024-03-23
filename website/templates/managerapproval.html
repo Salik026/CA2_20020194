@@ -1,0 +1,82 @@
+    {% extends "base.html" %}
+    {% block title %} Manager Approval {% endblock%}
+    {% block content %}
+
+     {% block style %}
+    <style>
+        body {
+            background-color: Pink; /* Light red background color */
+        }
+
+    </style>
+
+
+    {% endblock%}
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-8" >
+                <div class="p-5 mb-4 bg-light rounded-3">
+                    <div class="container-fluid py-5">
+                    <h1 class="display-5 fw-bold">Pending leaves</h1>
+                    <div  class="col-md-8 form-group" align="center" id="leaves">
+                        <form method="POST">
+                        {% for leave in leaves %}
+                        <div class="card border-dark ">
+                            <div class="card-body">
+                                <div align="left"class="card-text"> 
+                                    Employee Name : {{leave.user.username}}<br>
+                                    Leave Application number : {{leave.leaveid}} <br>
+                                    Leave Start Date : {{leave.startdate}} <br>
+                                    Leave End Date : {{leave.enddate}}<br>
+                                    Comments : {{leave.comment}}<br>
+                                    <div align="center">
+                                        <button class="btn btn-danger" type="submit" value="2"> <a class="btn btn-danger" href="/rejectleave/{{leave.leaveid}}">Reject</a></button> &nbsp;&nbsp;
+                                        <button class="btn btn-success" type="submit" value="1"> <a class="btn btn-success" href="/approveleave/{{leave.leaveid}}">Approve</a> </button> &nbsp;
+                                    </div>
+                                    <br>
+                                </div>
+                                <div class="card-footer text-muted">
+                                    Leave applied on {{leave.leavedate_created}}
+                                </div>
+                            </div>
+            
+                        </div>
+                        {% endfor %}
+                    </form>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+        <div class="col-md-4" >
+            <div class="p-5 mb-4 bg-light rounded-3">
+                <div class="container-fluid py-5">
+                <h1 class="display-5 fw-bold">Additional Information</h1>
+                <p class="col-md-8 fs-4">
+                    <ol>
+                        <li>
+                            View All the pending leave application
+                        </li>
+                        <li>
+                            Take action -> Approve or Reject leave
+                        </li>
+                        <li>
+                            If Approved, applicant can see the status as Approved 
+                        </li>
+                        <li>
+                            If Rejected, applicant can see the status as Rejected 
+                        </li>
+
+                    </ol>
+                </p>
+                
+                </div>
+            </div>
+        </div>
+
+
+        </div>
+    </div>
+
+    {% endblock %}
