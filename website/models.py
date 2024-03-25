@@ -1,5 +1,4 @@
 from email.policy import default
-from msilib.schema import Class
 from pytz import timezone
 from sqlalchemy import false
 from . import db
